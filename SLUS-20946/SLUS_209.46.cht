@@ -4,9 +4,6 @@ Mastercode
 E002FFFF 00700942
 2059D390 0C135858
 2059D3A4 00000000
-//90245718 0C1559A4
-//9053EB10 0C14FA6C
-//90532640 0C1538EC
 
 
 //------------------------------------------------Fixes------------------------------------------------//
@@ -120,9 +117,9 @@ E002FFFF 00700942
 202AB6F8 24050231 //Breath bar pos x
 
 //CHud::DrawBustedWastedMessage width 
-202AF568 3C013F90	//lui     $f0, 0x3f90
-202AF56C 44816000	//mtc1    $f0, $f12
-202AF570 0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+202AF568 3C033F90	//lui     $v1, 0x3f90
+202AF56C 0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+202AF570 44836000	//mtc1    $v1, $f12
 202AF574 0C0AA2F4  //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
 202AF578 24040001  //li      $a0, 1           # Load Immediate
 202AF57C 0C0AA310  //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
@@ -139,9 +136,9 @@ E002FFFF 00700942
 202AF5A8 44820000  //mtc1    $v0, $f0         # Move to FPU
 
 //CHud::DrawSuccessFailedMessage width
-202AF0FC 3C013f59	//lui     $f0, 0x3f59
-202AF100 44816000	//mtc1    $f0, $f12
-202AF104 0C0AA200   //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+202AF0FC 3C033f59	//lui     $v1, 0x3f59
+202AF100 0C0AA200   //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+202AF104 44836000	//mtc1    $v1, $f12
 202AF108 0C0AA2F4   //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
 202AF10C 24040001   //li      $a0, 1           # Load Immediate
 202AF110 0C0AA310   //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
@@ -204,9 +201,7 @@ E002FFFF 00700942
 202AD82C 3c023f33 //Vehicle name width
 202AFCAC 3c023f33 //Mission title width
 
-
 202AD29C c78c8384 //Area name width hook - 0x663474
-202AF100 C78C8384 //mission passed to area name width hook
 
 20663bc8 3ecccccd //Money Width
 
@@ -217,7 +212,7 @@ E002FFFF 00700942
 202AC440 C78C82BC //DrawVitalStats weekday width hook
 202AC438 C78D899C //DrawVitalStats weekday height hook
 
-2023E5C4 3c023f33 //CMenuManager::DrawWindow width
+2023E5C4 3c023f33 //CMenuManager::DrawWindow title width
 
 202ACAB4 3C0341d4 //AltitudeBar width
 202ACC10 3C0241e5 //AltitudeCounter width
@@ -242,7 +237,7 @@ E002FFFF 00700942
 201130C8 03e00080 //New SetFOV
 201130CC E78C9A90 //New SetFOV
 
-2021DFE0 3c0242C8 // Emergency Vehicles
+2021DFE0 3c0242a0 // Emergency Vehicles Fix
 
 202EE0E0 3C024120 // Fix sky multitude
 202EE0E8 00000000 // Fix sky multitude
@@ -256,3 +251,10 @@ E002FFFF 00700942
 20234A14 c78c8b68 //Hook Menu Items Width to Subtitles width
 202354F8 c78c8b68 //Hook Menu Items Width to Subtitles width
 20242190 3c023ecc //Set Menu Labels Width
+
+//-------------------------------------------------Debug-----------------------------------------------//
+
+//20515870 00000000 //Disable radiosity
+//2039B53C 24040001 //Set VSync Mode to 60 FPS
+//20245790 00000000 //Skip MPEG Decoder
+//202457B0 00000000 //Skip MPEG Decoder

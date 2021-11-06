@@ -112,9 +112,9 @@ patch=0,EE,202AB6B0,extended,24050231 //Breath bar pos x
 patch=0,EE,202AB6F8,extended,24050231 //Breath bar pos x
 
 //CHud::DrawBustedWastedMessage width 
-patch=0,EE,202AF568,extended,3C013F90	//lui     $f0, 0x3f90
-patch=0,EE,202AF56C,extended,44816000	//mtc1    $f0, $f12
-patch=0,EE,202AF570,extended,0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF568,extended,3C033F90	//lui     $v1, 0x3f90
+patch=0,EE,202AF56C,extended,0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF570,extended,44836000	//mtc1    $v1, $f12
 patch=0,EE,202AF574,extended,0C0AA2F4  //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
 patch=0,EE,202AF578,extended,24040001  //li      $a0, 1           # Load Immediate
 patch=0,EE,202AF57C,extended,0C0AA310  //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
@@ -131,9 +131,9 @@ patch=0,EE,202AF5A4,extended,C42132D8  //lwc1    $f1, _styledText3Alpha  # Load 
 patch=0,EE,202AF5A8,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
 
 //CHud::DrawSuccessFailedMessage width
-patch=0,EE,202AF0FC,extended,3C013f59	//lui     $f0, 0x3f59
-patch=0,EE,202AF100,extended,44816000	//mtc1    $f0, $f12
-patch=0,EE,202AF104,extended,0C0AA200   //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF0FC,extended,3C033f59	//lui     $v1, 0x3f59
+patch=0,EE,202AF100,extended,0C0AA200   //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF104,extended,44836000	//mtc1    $v1, $f12
 patch=0,EE,202AF108,extended,0C0AA2F4   //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
 patch=0,EE,202AF10C,extended,24040001   //li      $a0, 1           # Load Immediate
 patch=0,EE,202AF110,extended,0C0AA310   //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
@@ -196,9 +196,7 @@ patch=0,EE,202ADA20,extended,3c033ecc //mission timers
 patch=0,EE,202AD82C,extended,3c023f33 //Vehicle name width
 patch=0,EE,202AFCAC,extended,3c023f33 //Mission title width
 
-
 patch=0,EE,202AD29C,extended,c78c8384 //Area name width hook - 0x663474
-patch=0,EE,202AF100,extended,C78C8384 //mission passed to area name width hook
 
 patch=0,EE,20663bc8,extended,3ecccccd //Money Width
 
@@ -209,7 +207,7 @@ patch=0,EE,20663674,extended,3EB33333 //Help box Width
 patch=0,EE,202AC440,extended,C78C82BC //DrawVitalStats weekday width hook
 patch=0,EE,202AC438,extended,C78D899C //DrawVitalStats weekday height hook
 
-patch=0,EE,2023E5C4,extended,3c023f33 //CMenuManager::DrawWindow width
+patch=0,EE,2023E5C4,extended,3c023f33 //CMenuManager::DrawWindow title width
 
 patch=0,EE,202ACAB4,extended,3C0341d4 //AltitudeBar width
 patch=0,EE,202ACC10,extended,3C0241e5 //AltitudeCounter width
@@ -234,7 +232,7 @@ patch=0,EE,201130C4,extended,46006302 //New SetFOV
 patch=0,EE,201130C8,extended,03e00080 //New SetFOV
 patch=0,EE,201130CC,extended,E78C9A90 //New SetFOV
 
-patch=0,EE,2021DFE0,extended,3c0242C8 // Emergency Vehicles
+patch=0,EE,2021DFE0,extended,3c0242a0 // Emergency Vehicles Fix
 
 patch=0,EE,202EE0E0,extended,3C024120 // Fix sky multitude
 patch=0,EE,202EE0E8,extended,00000000 // Fix sky multitude
