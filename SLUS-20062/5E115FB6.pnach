@@ -1,0 +1,95 @@
+
+//CFont::SetScale hook
+patch=0,EE,202CC700,extended,3C013f40 //lui $at, 0x3f40
+patch=0,EE,202CC704,extended,44810000 //mtc1 $at, $f0
+patch=0,EE,202CC708,extended,46006302 //mul.s $f12, $f0
+patch=0,EE,202CC70c,extended,3c01005F //lui     $at, 0x5F
+patch=0,EE,202CC710,extended,e42cB674 //swc1    $f12, flt_5EB674
+patch=0,EE,202CC714,extended,3c01005F //lui     $at, 0x5F
+patch=0,EE,202CC718,extended,03e00008 //jr ra
+patch=0,EE,202CC71C,extended,e42dB678 //swc1    $f13, flt_5EB678
+
+patch=0,EE,202CFE3C,extended,3c024419 //Fist Icon right
+patch=0,EE,202CFE54,extended,3c02440d //Fist Icon left
+
+patch=0,EE,202CFC98,extended,3c02440c //Money shadow text pos X
+patch=0,EE,202CFC58,extended,3c02440c //Money text pos X
+
+patch=0,EE,202D016C,extended,3c02440c //Health shadow text pos X
+patch=0,EE,202D0228,extended,3c02440c //Health text pos X
+patch=0,EE,202D01B8,extended,3C024401 //Health shadow icon pos X
+patch=0,EE,202D01E0,extended,3C024401 //Health shadow icon pos X
+patch=0,EE,202D0298,extended,3C024401 //Health icon pos X
+
+patch=0,EE,202D03C8,extended,3c0243f9 //Armour shadow text pos X
+patch=0,EE,202D0474,extended,3c0243f8 //Armour text pos X
+patch=0,EE,202D0410,extended,3C0243E3 //Armour shadow icon pos X
+patch=0,EE,202D0438,extended,3C0243E3 //Armour shadow icon pos X
+patch=0,EE,202D04BC,extended,3C0243E2 //Armour icon pos X
+
+patch=0,EE,202D0F6C,extended,3c02440c //Clock shadow text pos X
+patch=0,EE,202D0FAC,extended,3c02440b //Clock text pos X
+
+patch=0,EE,202CFF7C,extended,3c024413 //Weapon ammo text pos X
+patch=0,EE,202CFF80,extended,34420000 //Weapon ammo text pos X - 2 last bytes
+
+
+patch=0,EE,202D18F4,extended,3c0243D4 //Radar Ring down?
+patch=0,EE,202D18E4,extended,3c0243AB //Radar Ring up?
+patch=0,EE,202D18DC,extended,3c0241e0 //Radar Ring left
+patch=0,EE,202D18EC,extended,3c0242c0 //Radar Ring right
+
+patch=0,EE,2029619C,extended,3c024270 //CRadar::DrawRadarSection width
+//patch=0,EE,202961B8,extended,3c0242AE //CRadar::DrawRadarSection height
+patch=0,EE,202961A4,extended,3c044278 //CRadar::DrawRadarSection x
+patch=0,EE,202961C0,extended,3c0243BF //CRadar::DrawRadarSection y
+
+patch=0,EE,2029655C,extended,3c024270 //CRadar::DrawRadarSection width
+//patch=0,EE,2029657C,extended,3c0242AE //CRadar::DrawRadarSection height
+patch=0,EE,20296564,extended,3c034278 //CRadar::DrawRadarSection x
+patch=0,EE,20296590,extended,3c0243BF //CRadar::DrawRadarSection y
+
+patch=0,EE,20296250,extended,3c024270 //CRadar::DrawRadarMask width
+//patch=0,EE,20296250,extended,3c0242AE //CRadar::DrawRadarMask height
+patch=0,EE,20296268,extended,3c054278 //CRadar::DrawRadarMask x
+patch=0,EE,2029626C,extended,3c0243BF //CRadar::DrawRadarMask y
+
+patch=0,EE,20298508,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,20298520,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,20298538,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,20298540,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,202986A8,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,202986D0,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,202986E4,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,202986EC,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,20298bb0,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,20298BCC,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,20298BDC,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,20298BE4,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,20299338,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,20299354,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,20299364,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,2029936C,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,20299b28,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,20299B44,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,20299B54,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,20299B5C,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,2029a2c0,extended,3c024270 //CRadar::DrawBlips width
+patch=0,EE,2029A2DC,extended,3c024278 //CRadar::DrawBlips x
+patch=0,EE,2029A2EC,extended,3c0242AE //CRadar::DrawBlips height
+patch=0,EE,2029A2f4,extended,3c0243BF //CRadar::DrawBlips y
+
+patch=0,EE,20296FD8,extended,3C0240C6  //lui     $v0, 0x40C6 - CRadar::DrawRotatingRadarSprite width
+
+CSprite2d::Draw((CRect const &, CRGBA const &)) = 0x2D4370
+
+//patch=0,EE,2029A69C,extended,00000000
+
+//Disable Movies - DEBUG
+//patch=0,EE,2037C020,extended,03e00008
+//patch=0,EE,2037C024,extended,00000000
