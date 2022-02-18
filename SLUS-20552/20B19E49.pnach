@@ -1,0 +1,61 @@
+
+
+patch=0,EE,20290EC4,extended,3c044270 //Radar Width
+
+patch=0,EE,20290AA8,extended,3c024270 //Radar Mask Width
+patch=0,EE,20290BD0,extended,3c024270 //Radar Mask Width
+
+patch=0,EE,20293690,extended,3c024270 //Radar stuff Width
+patch=0,EE,202938C4,extended,3c024270 //Radar stuff Width
+patch=0,EE,20293934,extended,3c024270 //Radar stuff Width
+patch=0,EE,202940B4,extended,3c024270 //Radar stuff Width
+patch=0,EE,20294124,extended,3c024270 //Radar stuff Width
+
+patch=0,EE,20294DD0,extended,3c034270 //Radar stuff Width
+
+patch=0,EE,20295458,extended,3c034270 //Radar Blip Disc Width
+
+patch=0,EE,202D39E8,extended,3c03424c //Radar Ring left
+patch=0,EE,202D3A90,extended,3c03424c //Radar Ring left
+
+patch=0,EE,202D39F8,extended,3c0342f6 //Radar Ring right
+patch=0,EE,202D3AA0,extended,3c0342f6 //Radar Ring right
+
+//CFont::SetScale hook
+patch=0,EE,202CD990,extended,3C013f40 //lui $at, 0x3f40
+patch=0,EE,202CD994,extended,44810000 //mtc1 $at, $f0
+patch=0,EE,202CD998,extended,46006302 //mul.s $f12, $f0
+patch=0,EE,202CD99C,extended,3c010069 //lui     $at, 0x7C
+patch=0,EE,202CD9A0,extended,e42cd5f4 //swc1    $f12, flt_68D5F4
+patch=0,EE,202CD9A4,extended,3c010069 //lui     $at, 0x7C
+patch=0,EE,202CD9A8,extended,03e00008 //jr ra
+patch=0,EE,202CD9AC,extended,e42dd5f8 //swc1    $f13, flt_68D5F8
+
+void CFont::SetScale(float w, float h){
+	globalWidth = w*0.75;
+	globalHeight = h;
+}
+
+patch=0,EE,202D1CB4,extended,3c034409 // Fist Icon left
+
+patch=0,EE,202D1CC4,extended,3c024415 // Fist icon right
+patch=0,EE,202D1CC8,extended,3442a391 // Fist icon right
+
+patch=0,EE,202D1C54,extended,3c0341c7 // Weapon Icon width
+
+//--------------------------------------------------FOV------------------------------------------------//
+
+patch=0,EE,201325BC,extended,3C013F9D //New SetFOV
+patch=0,EE,201325C0,extended,44810000 //New SetFOV
+patch=0,EE,201325C4,extended,46006302 //New SetFOV
+patch=0,EE,201325C8,extended,03E00008 //New SetFOV
+patch=0,EE,201325CC,extended,E78C86F8 //New SetFOV
+
+patch=0,EE,202434EC,extended,0C04C96F //SetFOV Call
+patch=0,EE,2026FE1C,extended,0C04C972 //SetFOV Call
+patch=0,EE,202703F4,extended,0C04C972 //SetFOV Call
+
+//-------------------------------------------------Debug-----------------------------------------------//
+
+//patch=0,EE,20273988,extended,00000000 //Skip MPEG Decoder
+//patch=0,EE,202739A8,extended,00000000 //Skip MPEG Decoder
