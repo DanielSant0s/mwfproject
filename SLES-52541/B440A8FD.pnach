@@ -44,54 +44,54 @@ comment=GTA San Andreas Modern Widescreen Fix adapted for PAL region (by github.
 ////Fix 4th texture memory leak on effects
 //patch=0,EE,203D4D50,extended,8E240018
 //patch=0,EE,203D4D64,extended,AE200018
-//
-////-------------------------------------------------HUD-------------------------------------------------//
-//
-////patch=0,EE,20663C00,extended,3f666666 //Wanted Height
-//patch=0,EE,20663C04,extended,3ecccccd //Wanted Width
-////patch=0,EE,20663C0C,extended,3f8a3d71 //Wanted Shadow Height
-//patch=0,EE,20663C10,extended,3ef5c28f //Wanted Shadow Width
-////patch=0,EE,202AA78C,extended,3c023fc0 //Wanted Vertical Padding
-//
-//patch=0,EE,2026E03C,extended,3c084270 //Radar Width
-//patch=0,EE,2026ED00,extended,3c024270 //Radar Mask Width
-//patch=0,EE,2026EE30,extended,3c034270 //Radar Mask Width
-//patch=0,EE,2026EF18,extended,3c034270 //Radar Mask Width
-//patch=0,EE,20269528,extended,3c024270 //Radar Width unknown
-//patch=0,EE,2026E658,extended,3c024270 //Radar Width plane green overlay
-//patch=0,EE,202AC8F8,extended,3c024248 //Radar Width plane overlay
-//patch=0,EE,202AC964,extended,3c024270 //Radar Heigth plane overlay
-//
-//patch=0,EE,202ACC4C,extended,3c0341eb //Radar Disc Width left up - a esquerda dessa porra aqui
-//patch=0,EE,202ACC50,extended,3c0243aa //Radar Disc Width left up - a parte de cima dessa porra aqui
-//patch=0,EE,202ACC60,extended,3c034278 //Radar Disc Width left up - a direita dessa porra aqui
-//patch=0,EE,202ACC64,extended,3c0243bf //Radar Disc Width left up - a parte de baixo dessa porra aqui
-//
-//patch=0,EE,202ACC98,extended,3c0342be //Radar Disc Width right up - a esquerda dessa porra aqui
-//patch=0,EE,202ACC9c,extended,3c0243aa //Radar Disc Width right up - a parte de cima dessa porra
-//patch=0,EE,202ACCac,extended,3c034278 //Radar Disc Width right up - a direita dessa porra aqui
-//patch=0,EE,202ACCb0,extended,3c0243bf //Radar Disc Width right up - a parte de baixo dessa porra
-//
-//patch=0,EE,202ACCE4,extended,3c0341eb //Radar Disc Width left down - a esquerda dessa porra aqui
-//patch=0,EE,202ACCE8,extended,3c0243d4 //Radar Disc Width left down - a parte de cima dessa porra
-//patch=0,EE,202ACCF8,extended,3c034278 //Radar Disc Width left down - a direita dessa porra aqui
-//patch=0,EE,202ACCFC,extended,3c0243bf //Radar Disc Width left down - a parte de baixo dessa porra
-//
-//patch=0,EE,202ACD30,extended,3c0342be //Radar Disc Width right down - a esquerda dessa porra aqui
-//patch=0,EE,202ACD34,extended,3c0243d4 //Radar Disc Width right down - a parte de cima dessa porra
-//patch=0,EE,202ACD44,extended,3c034278 //Radar Disc Width right down - a direita dessa porra aqui
-//patch=0,EE,202ACD48,extended,3c0243bf //Radar Disc Width right down - a parte de baixo dessa porra
-//
-//patch=0,EE,2026AE54,extended,3c034270 //Radar Blip disc Width
-//
-//patch=0,EE,2026E04C,extended,3c064278 //Radar X Pos
-////patch=0,EE,2026E0A0,extended,3c0443BF //Radar Y Pos
-//patch=0,EE,2026ED10,extended,3c024278 //Radar Mask X Pos
-//patch=0,EE,2026EE3C,extended,3c044278 //Radar Mask X Pos
-//patch=0,EE,2026EF34,extended,3c044278 //Radar Mask X Pos
-//patch=0,EE,2026AE6C,extended,3c034278 //Radar Blip disc X Pos
-//patch=0,EE,2026E674,extended,3c024278 //Radar X Pos plane green overlay
-//patch=0,EE,202AC900,extended,3c034278 //Radar X Pos plane overlay
+
+//-------------------------------------------------HUD-------------------------------------------------//
+
+//patch=0,EE,20664480,extended,3f666666 //Wanted Height
+patch=0,EE,20664484,extended,3ecccccd //Wanted Width
+//patch=0,EE,2066448C,extended,3f8a3d71 //Wanted Shadow Height
+patch=0,EE,20664490,extended,3ef5c28f //Wanted Shadow Width
+//patch=0,EE,202AA98C,extended,3c023fc0 //Wanted Vertical Padding
+
+patch=0,EE,2026E18C,extended,3c084270 //Radar Width
+patch=0,EE,2026EE50,extended,3c024270 //Radar Mask Width
+patch=0,EE,2026EF80,extended,3c034270 //Radar Mask Width
+patch=0,EE,2026F068,extended,3c034270 //Radar Mask Width
+patch=0,EE,20269678,extended,3c024270 //Radar Width unknown
+patch=0,EE,2026E7A8,extended,3c024270 //Radar Width plane green overlay
+patch=0,EE,202ACAF8,extended,3c024248 //Radar Width plane overlay
+patch=0,EE,202ACB64,extended,3c024270 //Radar Heigth plane overlay
+
+patch=0,EE,202ACE4C,extended,3c0341eb //Radar Disc Width left up - a esquerda dessa porra aqui
+patch=0,EE,202ACE50,extended,3c0243aa //Radar Disc Width left up - a parte de cima dessa porra aqui
+patch=0,EE,202ACE60,extended,3c034278 //Radar Disc Width left up - a direita dessa porra aqui
+patch=0,EE,202ACE64,extended,3c0243bf //Radar Disc Width left up - a parte de baixo dessa porra aqui
+
+patch=0,EE,202ACE98,extended,3c0342be //Radar Disc Width right up - a esquerda dessa porra aqui
+patch=0,EE,202ACE9C,extended,3c0243aa //Radar Disc Width right up - a parte de cima dessa porra
+patch=0,EE,202ACEAC,extended,3c034278 //Radar Disc Width right up - a direita dessa porra aqui
+patch=0,EE,202ACEB0,extended,3c0243bf //Radar Disc Width right up - a parte de baixo dessa porra
+
+patch=0,EE,202ACEE4,extended,3c0341eb //Radar Disc Width left down - a esquerda dessa porra aqui
+patch=0,EE,202ACEE8,extended,3c0243d4 //Radar Disc Width left down - a parte de cima dessa porra
+patch=0,EE,202ACEF8,extended,3c034278 //Radar Disc Width left down - a direita dessa porra aqui
+patch=0,EE,202ACEFC,extended,3c0243bf //Radar Disc Width left down - a parte de baixo dessa porra
+
+patch=0,EE,202ACF30,extended,3c0342be //Radar Disc Width right down - a esquerda dessa porra aqui
+patch=0,EE,202ACF34,extended,3c0243d4 //Radar Disc Width right down - a parte de cima dessa porra
+patch=0,EE,202ACF44,extended,3c034278 //Radar Disc Width right down - a direita dessa porra aqui
+patch=0,EE,202ACF48,extended,3c0243bf //Radar Disc Width right down - a parte de baixo dessa porra
+
+patch=0,EE,2026AFA4,extended,3c034270 //Radar Blip disc Width
+
+patch=0,EE,2026E19C,extended,3c064278 //Radar X Pos
+//patch=0,EE,2026E1F0,extended,3c0443BF //Radar Y Pos
+patch=0,EE,2026EE60,extended,3c024278 //Radar Mask X Pos
+patch=0,EE,2026EF8C,extended,3c044278 //Radar Mask X Pos
+patch=0,EE,2026F084,extended,3c044278 //Radar Mask X Pos
+patch=0,EE,2026AFBC,extended,3c034278 //Radar Blip disc X Pos
+patch=0,EE,2026E7C4,extended,3c024278 //Radar X Pos plane green overlay
+patch=0,EE,202ACB00,extended,3c034278 //Radar X Pos plane overlay
 
 patch=0,EE,202AA0F4,extended,3C024210 //Fist Icon Width
 patch=0,EE,202AA034,extended,3c024190 //Weapon Icon Width
