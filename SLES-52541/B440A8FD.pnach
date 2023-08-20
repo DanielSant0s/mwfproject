@@ -92,25 +92,25 @@ comment=GTA San Andreas Modern Widescreen Fix adapted for PAL region (by github.
 //patch=0,EE,2026AE6C,extended,3c034278 //Radar Blip disc X Pos
 //patch=0,EE,2026E674,extended,3c024278 //Radar X Pos plane green overlay
 //patch=0,EE,202AC900,extended,3c034278 //Radar X Pos plane overlay
-//
-//patch=0,EE,202A9EF4,extended,3C024210 //Fist Icon Width
-//patch=0,EE,202A9E34,extended,3c024190 //Weapon Icon Width
-//patch=0,EE,202ABA40,extended,2405020D //Weapon Icon Pos X
-//patch=0,EE,202ABA7C,extended,2405020D //Weapon Icon Pos X - Player 2
-//
-//patch=0,EE,20663748,extended,3e800000 //Ammo Width
-//patch=0,EE,202ABA90,extended,2405021F //Ammo X Pos
-//patch=0,EE,202ABACC,extended,2405021F //Ammo X Pos - Player 2
-//
-//patch=0,EE,202A9B84,extended,3c0242A8 //Health bar width
-//patch=0,EE,202A9904,extended,2404002F //Armour bar width
-//patch=0,EE,202A9A04,extended,2404002F //Breath bar width
-//
-//patch=0,EE,202AB51C,extended,24050231 //Armour bar pos x
-//patch=0,EE,202AB560,extended,24050231 //Armour bar pos x
-//patch=0,EE,202AB6B0,extended,24050231 //Breath bar pos x
-//patch=0,EE,202AB6F8,extended,24050231 //Breath bar pos x
-//
+
+patch=0,EE,202AA0F4,extended,3C024210 //Fist Icon Width
+patch=0,EE,202AA034,extended,3c024190 //Weapon Icon Width
+patch=0,EE,202ABC40,extended,2405020D //Weapon Icon Pos X
+patch=0,EE,202ABC7C,extended,2405020D //Weapon Icon Pos X - Player 2
+
+patch=0,EE,20663FC8,extended,3e800000 //Ammo Width
+patch=0,EE,202ABC90,extended,2405021F //Ammo X Pos
+patch=0,EE,202ABCCC,extended,2405021F //Ammo X Pos - Player 2
+
+patch=0,EE,202A9D84,extended,3c0242A8 //Health bar width
+patch=0,EE,202A9B04,extended,2404002F //Armour bar width
+patch=0,EE,202A9C04,extended,2404002F //Breath bar width
+
+patch=0,EE,202AB71C,extended,24050231 //Armour bar pos x
+patch=0,EE,202AB760,extended,24050231 //Armour bar pos x
+patch=0,EE,202AB8B0,extended,24050231 //Breath bar pos x
+patch=0,EE,202AB8F8,extended,24050231 //Breath bar pos x
+
 ////CHud::DrawBustedWastedMessage width 
 //patch=0,EE,202AF568,extended,3C033F90	//lui     $v1, 0x3f90
 //patch=0,EE,202AF56C,extended,0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
