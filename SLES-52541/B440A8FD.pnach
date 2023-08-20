@@ -152,45 +152,45 @@ comment=GTA San Andreas Modern Widescreen Fix adapted for PAL region (by github.
 //patch=0,EE,202AF144,extended,3C024F00   //lui     $v0, 0x4F00      # Load Upper Immediate
 //patch=0,EE,202AF148,extended,C42132D0   //lwc1    $f1, flt_7C32D0  # Load Word to FPU
 //patch=0,EE,202AF14C,extended,44820000   //mtc1    $v0, $f0         # Move to FPU
-//
-////CRadar::DrawRadarSprite width
-//patch=0,EE,2026D384,extended,3C034100  //lui     $v1, 0x4100      # Load Upper Immediate
-//patch=0,EE,2026D388,extended,0200102D  //move    $v0, $s0
-//patch=0,EE,2026D38C,extended,44831000  //mtc1    $v1, $f2         # Move to FPU
-//patch=0,EE,2026D390,extended,3C0340C6  //lui     $v1, 0x40C6
-//patch=0,EE,2026D394,extended,44831800  //mtc1    $v1, $f3         # Move to FPU
-//patch=0,EE,2026D398,extended,27A50050  //addiu   $a1, $sp, 0x70+var_20  # a2
-//patch=0,EE,2026D39C,extended,27A6006C  //addiu   $a2, $sp, 0x70+var_4  # rgbaColor
-//patch=0,EE,2026D3A0,extended,4603A801  //sub.s   $f0, $f21, $f3   # Floating-point Subtract
-//patch=0,EE,2026D3A4,extended,00021880  //sll     $v1, $v0, 2      # Shift Left Logical
-//patch=0,EE,2026D3A8,extended,3C020070  //li      $v0, dword_703A70  # Load Immediate
-//patch=0,EE,2026D3AC,extended,24423A70  //
-//patch=0,EE,2026D3B0,extended,00432021  //addu    $a0, $v0, $v1    # a1
-//patch=0,EE,2026D3B4,extended,E7A00050  //swc1    $f0, 0x70+var_20($sp)  # Store Word from FPU
-//patch=0,EE,2026D3B8,extended,4603A800  //add.s   $f0, $f21, $f3   # Floating-point Add
-//patch=0,EE,2026D3BC,extended,E7A00058  //swc1    $f0, 0x70+var_18($sp)  # Store Word from FPU
-//patch=0,EE,2026D3C0,extended,4602A041  //sub.s   $f1, $f20, $f2   # Floating-point Subtract
-//patch=0,EE,2026D3C4,extended,4602A000  //add.s   $f0, $f20, $f2   # Floating-point Add
-//patch=0,EE,2026D3C8,extended,E7A1005C  //swc1    $f1, 0x70+var_14($sp)  # Store Word from FPU
-//patch=0,EE,2026D3CC,extended,0C0AC258  //jal     _ZN9CSprite2d4DrawERK5CRectRK5CRGBA  # Jump And Link
-//patch=0,EE,2026D3D0,extended,E7A00054  //swc1    $f0, 0x70+var_1C($sp)  # Store Word from FPU
-//patch=0,EE,2026D3D4,extended,0200282D  //move    $a1, $s0
-//patch=0,EE,2026D3D8,extended,0C09A670  //jal     _ZN6CRadar19AddBlipToLegendListEhi  # Jump And Link
-//patch=0,EE,2026D3DC,extended,0000202D  //move    $a0, $zero
-//patch=0,EE,2026D3E0,extended,DFBF0040  //ld      $ra, 0x70+var_30($sp)  # Load Doubleword
-//patch=0,EE,2026D3E4,extended,C7B50004  //lwc1    $f21, 0x70+var_6C($sp)  # Load Word to FPU
-//patch=0,EE,2026D3E8,extended,7BB20030  //lq      $s2, 0x70+var_40($sp)  # Load Quadword
-//patch=0,EE,2026D3EC,extended,C7B40000  //lwc1    $f20, 0x70+var_70($sp)  # Load Word to FPU
-//patch=0,EE,2026D3F0,extended,7BB10020  //lq      $s1, 0x70+var_50($sp)  # Load Quadword
-//patch=0,EE,2026D3F4,extended,7BB00010  //lq      $s0, 0x70+var_60($sp)  # Load Quadword
-//patch=0,EE,2026D3F8,extended,03E00008  //jr      $ra              # Jump Register
-//patch=0,EE,2026D3FC,extended,27BD0070  //addiu   $sp, 0x70        # Add Immediate Unsigned
-//
-////CRadar::DrawBlips - Radar Centre
-//patch=0,EE,2026863C,extended,24050006
-//patch=0,EE,20268644,extended,24060008
-//patch=0,EE,20268674,extended,24050006
-//patch=0,EE,2026867C,extended,24060008
+
+//CRadar::DrawRadarSprite width
+patch=0,EE,2026D4D4,extended,3C034100  //lui     $v1, 0x4100      # Load Upper Immediate
+patch=0,EE,2026D4D8,extended,0200102D  //move    $v0, $s0
+patch=0,EE,2026D4DC,extended,44831000  //mtc1    $v1, $f2         # Move to FPU
+patch=0,EE,2026D4E0,extended,3C0340C6  //lui     $v1, 0x40C6
+patch=0,EE,2026D4E4,extended,44831800  //mtc1    $v1, $f3         # Move to FPU
+patch=0,EE,2026D4E8,extended,27A50050  //addiu   $a1, $sp, 0x70+var_20  # a2
+patch=0,EE,2026D4EC,extended,27A6006C  //addiu   $a2, $sp, 0x70+var_4  # rgbaColor
+patch=0,EE,2026D4F0,extended,4603A801  //sub.s   $f0, $f21, $f3   # Floating-point Subtract
+patch=0,EE,2026D4F4,extended,00021880  //sll     $v1, $v0, 2      # Shift Left Logical
+patch=0,EE,2026D4F8,extended,3C020070  //li      $v0, dword_703A70  # Load Immediate
+patch=0,EE,2026D4FC,extended,24423A70  //
+patch=0,EE,2026D500,extended,00432021  //addu    $a0, $v0, $v1    # a1
+patch=0,EE,2026D504,extended,E7A00050  //swc1    $f0, 0x70+var_20($sp)  # Store Word from FPU
+patch=0,EE,2026D508,extended,4603A800  //add.s   $f0, $f21, $f3   # Floating-point Add
+patch=0,EE,2026D50C,extended,E7A00058  //swc1    $f0, 0x70+var_18($sp)  # Store Word from FPU
+patch=0,EE,2026D510,extended,4602A041  //sub.s   $f1, $f20, $f2   # Floating-point Subtract
+patch=0,EE,2026D514,extended,4602A000  //add.s   $f0, $f20, $f2   # Floating-point Add
+patch=0,EE,2026D518,extended,E7A1005C  //swc1    $f1, 0x70+var_14($sp)  # Store Word from FPU
+patch=0,EE,2026D51C,extended,0C0AC258  //jal     _ZN9CSprite2d4DrawERK5CRectRK5CRGBA  # Jump And Link
+patch=0,EE,2026D520,extended,E7A00054  //swc1    $f0, 0x70+var_1C($sp)  # Store Word from FPU
+patch=0,EE,2026D524,extended,0200282D  //move    $a1, $s0
+patch=0,EE,2026D528,extended,0C09A670  //jal     _ZN6CRadar19AddBlipToLegendListEhi  # Jump And Link
+patch=0,EE,2026D52C,extended,0000202D  //move    $a0, $zero
+patch=0,EE,2026D530,extended,DFBF0040  //ld      $ra, 0x70+var_30($sp)  # Load Doubleword
+patch=0,EE,2026D534,extended,C7B50004  //lwc1    $f21, 0x70+var_6C($sp)  # Load Word to FPU
+patch=0,EE,2026D538,extended,7BB20030  //lq      $s2, 0x70+var_40($sp)  # Load Quadword
+patch=0,EE,2026D53C,extended,C7B40000  //lwc1    $f20, 0x70+var_70($sp)  # Load Word to FPU
+patch=0,EE,2026D540,extended,7BB10020  //lq      $s1, 0x70+var_50($sp)  # Load Quadword
+patch=0,EE,2026D544,extended,7BB00010  //lq      $s0, 0x70+var_60($sp)  # Load Quadword
+patch=0,EE,2026D548,extended,03E00008  //jr      $ra              # Jump Register
+patch=0,EE,2026D54C,extended,27BD0070  //addiu   $sp, 0x70        # Add Immediate Unsigned
+
+//CRadar::DrawBlips - Radar Centre
+patch=0,EE,2026878C,extended,24050006
+patch=0,EE,20268794,extended,24060008
+patch=0,EE,202687C4,extended,24050006
+patch=0,EE,202687CC,extended,24060008
 
 patch=0,EE,202ADC20,extended,3c033ecc //mission timers
 patch=0,EE,202ADA2C,extended,3c023f33 //Vehicle name width
