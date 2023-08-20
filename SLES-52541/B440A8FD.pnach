@@ -214,11 +214,11 @@ patch=0,EE,202ACE10,extended,3C0241e5 //AltitudeCounter width
 patch=0,EE,202ACE00,extended,3C034190 //AltitudeCounter X Pos
 
 //Set drop shadows to outline
-patch=0,EE,202A8D90,extended,3c01007c
-patch=0,EE,202A8D94,extended,a0202346
-patch=0,EE,202A8D98,extended,3c01007c
-patch=0,EE,202A8D9C,extended,a024234b
-patch=0,EE,202A8Da8,extended,a024234c
+patch=0,EE,202A8D90,extended,3C01007C
+patch=0,EE,202A8D94,extended,A0202FD6
+patch=0,EE,202A8D98,extended,3C01007C
+patch=0,EE,202A8D9C,extended,A0242FDB
+patch=0,EE,202A8DA8,extended,A0242FDC
 
 //--------------------------------------------------FOV------------------------------------------------//
 
