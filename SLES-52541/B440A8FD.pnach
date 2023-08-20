@@ -4,10 +4,10 @@ comment=GTA San Andreas Modern Widescreen Fix (adapted for PAL region by Augusti
 // Adapted for PAL region by Augustin Blanchet https://github.com/augstb
 //------------------------------------------------Fixes------------------------------------------------//
 
-//Linear Filtering for License Plates
+// Linear Filtering for License Plates
 patch=0,EE,204A4E84,extended,34630002 ori $v1, 2 //RWLINEARFILTER
 
-//Fixed ammo for melee weapons in cheats
+// Fixed ammo for melee weapons in cheats
 patch=0,EE,2059E0FC,extended,24060001 li $s2 1 //knife
 patch=0,EE,2059E208,extended,24060001 li $s2 1 //knife
 patch=0,EE,2059E3D0,extended,24060001 li $s2 1 //chainsaw
@@ -15,7 +15,7 @@ patch=0,EE,2059E4A4,extended,24060001 li $s2 1 //chainsaw
 patch=0,EE,2059FEEC,extended,24060001 li $s2 1 //parachute
 patch=0,EE,2059FC2C,extended,24060001 li $s2 1 //katana
 
-//014C cargen counter fix (by spaceeinstein)
+// 014C cargen counter fix (by spaceeinstein)
 patch=0,EE,20295CF0,extended,2C61FFFF //slti => sltiu
 patch=0,EE,20295CF4,extended,10000004 //beqz => b
 
@@ -42,17 +42,17 @@ patch=0,EE,202AAD44,extended,00000000 nop
 patch=0,EE,202AB484,extended,00000000 nop
 patch=0,EE,202AB4B4,extended,00000000 nop
 
-//Fix 4th texture memory leak on effects
+// Fix 4th texture memory leak on effects
 patch=0,EE,203D5070,extended,8E240018
 patch=0,EE,203D5084,extended,AE200018
 
 //-------------------------------------------------HUD-------------------------------------------------//
 
-//patch=0,EE,20664480,extended,3f666666 //Wanted Height
+// patch=0,EE,20664480,extended,3f666666 //Wanted Height
 patch=0,EE,20664484,extended,3ecccccd //Wanted Width
-//patch=0,EE,2066448C,extended,3f8a3d71 //Wanted Shadow Height
+// patch=0,EE,2066448C,extended,3f8a3d71 //Wanted Shadow Height
 patch=0,EE,20664490,extended,3ef5c28f //Wanted Shadow Width
-//patch=0,EE,202AA98C,extended,3c023fc0 //Wanted Vertical Padding
+// patch=0,EE,202AA98C,extended,3c023fc0 //Wanted Vertical Padding
 
 patch=0,EE,2026E18C,extended,3c084270 //Radar Width
 patch=0,EE,2026EE50,extended,3c024270 //Radar Mask Width
@@ -86,7 +86,7 @@ patch=0,EE,202ACF48,extended,3c0243bf //Radar Disc Width right down - a parte de
 patch=0,EE,2026AFA4,extended,3c034270 //Radar Blip disc Width
 
 patch=0,EE,2026E19C,extended,3c064278 //Radar X Pos
-//patch=0,EE,2026E1F0,extended,3c0443BF //Radar Y Pos
+// patch=0,EE,2026E1F0,extended,3c0443BF //Radar Y Pos
 patch=0,EE,2026EE60,extended,3c024278 //Radar Mask X Pos
 patch=0,EE,2026EF8C,extended,3c044278 //Radar Mask X Pos
 patch=0,EE,2026F084,extended,3c044278 //Radar Mask X Pos
@@ -112,7 +112,7 @@ patch=0,EE,202AB760,extended,24050231 //Armour bar pos x
 patch=0,EE,202AB8B0,extended,24050231 //Breath bar pos x
 patch=0,EE,202AB8F8,extended,24050231 //Breath bar pos x
 
-//CHud::DrawBustedWastedMessage width 
+// CHud::DrawBustedWastedMessage width 
 patch=0,EE,202AF768,extended,3C033F90  //lui     $v1, 0x3f90
 patch=0,EE,202AF76C,extended,0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
 patch=0,EE,202AF770,extended,44836000  //mtc1    $v1, $f12
@@ -131,7 +131,7 @@ patch=0,EE,202AF7A0,extended,3C024F00  //lui     $v0, 0x4F00      # Load Upper I
 patch=0,EE,202AF7A4,extended,C4213F68  //lwc1    $f1, _styledText3Alpha  # Load Word to FPU
 patch=0,EE,202AF7A8,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
 
-//CHud::DrawSuccessFailedMessage width
+// CHud::DrawSuccessFailedMessage width
 patch=0,EE,202AF2FC,extended,3C033F59  //lui     $v1, 0x3f59
 patch=0,EE,202AF300,extended,0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
 patch=0,EE,202AF304,extended,44836000  //mtc1    $v1, $f12
@@ -154,7 +154,7 @@ patch=0,EE,202AF344,extended,3C024F00  //lui     $v0, 0x4F00      # Load Upper I
 patch=0,EE,202AF348,extended,C4213F60  //lwc1    $f1, flt_7C32D0  # Load Word to FPU
 patch=0,EE,202AF34C,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
 
-//CRadar::DrawRadarSprite width
+// CRadar::DrawRadarSprite width
 patch=0,EE,2026D4D4,extended,3C034100  //lui     $v1, 0x4100      # Load Upper Immediate
 patch=0,EE,2026D4D8,extended,0200102D  //move    $v0, $s0
 patch=0,EE,2026D4DC,extended,44831000  //mtc1    $v1, $f2         # Move to FPU
@@ -187,7 +187,7 @@ patch=0,EE,2026D544,extended,7BB00010  //lq      $s0, 0x70+var_60($sp)  # Load Q
 patch=0,EE,2026D548,extended,03E00008  //jr      $ra              # Jump Register
 patch=0,EE,2026D54C,extended,27BD0070  //addiu   $sp, 0x70        # Add Immediate Unsigned
 
-//CRadar::DrawBlips - Radar Centre
+// CRadar::DrawBlips - Radar Centre
 patch=0,EE,2026878C,extended,24050006
 patch=0,EE,20268794,extended,24060008
 patch=0,EE,202687C4,extended,24050006
@@ -203,7 +203,7 @@ patch=0,EE,20664448,extended,3ecccccd //Money Width
 
 patch=0,EE,206644D8,extended,3ecccccd //Subtitles Width
 
-patch=0,EE,20663EF4,extended,3EB33333 //Help box Width
+// patch=0,EE,20663EF4,extended,3EB33333 //Help box Width
 
 patch=0,EE,202AC640,extended,C78C82BC //DrawVitalStats weekday width hook
 patch=0,EE,202AC638,extended,C78D899C //DrawVitalStats weekday height hook
@@ -214,7 +214,7 @@ patch=0,EE,202ACCB4,extended,3C0341d4 //AltitudeBar width
 patch=0,EE,202ACE10,extended,3C0241e5 //AltitudeCounter width
 patch=0,EE,202ACE00,extended,3C034190 //AltitudeCounter X Pos
 
-//Set drop shadows to outline
+// Set drop shadows to outline
 patch=0,EE,202A8D90,extended,3C01007C
 patch=0,EE,202A8D94,extended,A0202FD6
 patch=0,EE,202A8D98,extended,3C01007C
@@ -246,11 +246,11 @@ patch=0,EE,20234AA4,extended,24040001 //Set Menu Text Body
 
 patch=0,EE,20234A74,extended,c78c8b68 //Hook Menu Items Width to Subtitles width
 patch=0,EE,20235558,extended,c78c8b68 //Hook Menu Items Width to Subtitles width
-patch=0,EE,202421F0,extended,3c023ecc //Set Menu Labels Width
+// patch=0,EE,202421F0,extended,3c023ecc //Set Menu Labels Width
 
 //-------------------------------------------------Debug-----------------------------------------------//
 
-//patch=0,EE,20516060,extended,00000000 //Disable radiosity
-//patch=0,EE,2039B7BC,extended,24040001 //Set VSync Mode to 60 FPS
-//patch=0,EE,202457F0,extended,00000000 //Skip MPEG Decoder
-//patch=0,EE,20245810,extended,00000000 //Skip MPEG Decoder
+// patch=0,EE,20516060,extended,00000000 //Disable radiosity
+patch=0,EE,2039B7BC,extended,24040001 //Set VSync Mode to 60 FPS
+// patch=0,EE,202457F0,extended,00000000 //Skip MPEG Decoder
+// patch=0,EE,20245810,extended,00000000 //Skip MPEG Decoder

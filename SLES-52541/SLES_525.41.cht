@@ -2,13 +2,13 @@
 Mastercode
 9053EC10 0C14FAAC
 
-// ADAPTED FOR PAL REGION (by github.com/augstb)
+// Adapted for PAL region by Augustin Blanchet https://github.com/augstb
 //------------------------------------------------Fixes------------------------------------------------//
 
-//Linear Filtering for License Plates
+// Linear Filtering for License Plates
 204A4E84 34630002 ori $v1, 2 //RWLINEARFILTER
 
-//Fixed ammo for melee weapons in cheats
+// Fixed ammo for melee weapons in cheats
 2059E0FC 24060001 li $s2 1 //knife
 2059E208 24060001 li $s2 1 //knife
 2059E3D0 24060001 li $s2 1 //chainsaw
@@ -16,7 +16,7 @@ Mastercode
 2059FEEC 24060001 li $s2 1 //parachute
 2059FC2C 24060001 li $s2 1 //katana
 
-//014C cargen counter fix (by spaceeinstein)
+// 014C cargen counter fix (by spaceeinstein)
 20295CF0 2C61FFFF //slti => sltiu
 20295CF4 10000004 //beqz => b
 
@@ -43,17 +43,17 @@ Mastercode
 202AB484 00000000 nop
 202AB4B4 00000000 nop
 
-//Fix 4th texture memory leak on effects
+// Fix 4th texture memory leak on effects
 203D5070 8E240018
 203D5084 AE200018
 
 //-------------------------------------------------HUD-------------------------------------------------//
 
-//20664480 3f666666 //Wanted Height
+// 20664480 3f666666 //Wanted Height
 20664484 3ecccccd //Wanted Width
-//2066448C 3f8a3d71 //Wanted Shadow Height
+// 2066448C 3f8a3d71 //Wanted Shadow Height
 20664490 3ef5c28f //Wanted Shadow Width
-//202AA98C 3c023fc0 //Wanted Vertical Padding
+// 202AA98C 3c023fc0 //Wanted Vertical Padding
 
 2026E18C 3c084270 //Radar Width
 2026EE50 3c024270 //Radar Mask Width
@@ -87,7 +87,7 @@ Mastercode
 2026AFA4 3c034270 //Radar Blip disc Width
 
 2026E19C 3c064278 //Radar X Pos
-//2026E1F0 3c0443BF //Radar Y Pos
+// 2026E1F0 3c0443BF //Radar Y Pos
 2026EE60 3c024278 //Radar Mask X Pos
 2026EF8C 3c044278 //Radar Mask X Pos
 2026F084 3c044278 //Radar Mask X Pos
@@ -113,7 +113,7 @@ Mastercode
 202AB8B0 24050231 //Breath bar pos x
 202AB8F8 24050231 //Breath bar pos x
 
-//CHud::DrawBustedWastedMessage width 
+// CHud::DrawBustedWastedMessage width 
 202AF768 3C033F90  //lui     $v1, 0x3f90
 202AF76C 0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
 202AF770 44836000  //mtc1    $v1, $f12
@@ -132,7 +132,7 @@ Mastercode
 202AF7A4 C4213F68  //lwc1    $f1, _styledText3Alpha  # Load Word to FPU
 202AF7A8 44820000  //mtc1    $v0, $f0         # Move to FPU
 
-//CHud::DrawSuccessFailedMessage width
+// CHud::DrawSuccessFailedMessage width
 202AF2FC 3C033F59  //lui     $v1, 0x3f59
 202AF300 0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
 202AF304 44836000  //mtc1    $v1, $f12
@@ -155,7 +155,7 @@ Mastercode
 202AF348 C4213F60  //lwc1    $f1, flt_7C32D0  # Load Word to FPU
 202AF34C 44820000  //mtc1    $v0, $f0         # Move to FPU
 
-//CRadar::DrawRadarSprite width
+// CRadar::DrawRadarSprite width
 2026D4D4 3C034100  //lui     $v1, 0x4100      # Load Upper Immediate
 2026D4D8 0200102D  //move    $v0, $s0
 2026D4DC 44831000  //mtc1    $v1, $f2         # Move to FPU
@@ -188,7 +188,7 @@ Mastercode
 2026D548 03E00008  //jr      $ra              # Jump Register
 2026D54C 27BD0070  //addiu   $sp, 0x70        # Add Immediate Unsigned
 
-//CRadar::DrawBlips - Radar Centre
+// CRadar::DrawBlips - Radar Centre
 2026878C 24050006
 20268794 24060008
 202687C4 24050006
@@ -204,7 +204,7 @@ Mastercode
 
 206644D8 3ecccccd //Subtitles Width
 
-20663EF4 3EB33333 //Help box Width
+// 20663EF4 3EB33333 //Help box Width
 
 202AC640 C78C82BC //DrawVitalStats weekday width hook
 202AC638 C78D899C //DrawVitalStats weekday height hook
@@ -215,7 +215,7 @@ Mastercode
 202ACE10 3C0241e5 //AltitudeCounter width
 202ACE00 3C034190 //AltitudeCounter X Pos
 
-//Set drop shadows to outline
+// Set drop shadows to outline
 202A8D90 3C01007C
 202A8D94 A0202FD6
 202A8D98 3C01007C
@@ -247,11 +247,11 @@ Mastercode
 
 20234A74 c78c8b68 //Hook Menu Items Width to Subtitles width
 20235558 c78c8b68 //Hook Menu Items Width to Subtitles width
-202421F0 3c023ecc //Set Menu Labels Width
+// 202421F0 3c023ecc //Set Menu Labels Width
 
 //-------------------------------------------------Debug-----------------------------------------------//
 
-//20516060 00000000 //Disable radiosity
-//2039B7BC 24040001 //Set VSync Mode to 60 FPS
-//202457F0 00000000 //Skip MPEG Decoder
-//20245810 00000000 //Skip MPEG Decoder
+// 20516060 00000000 //Disable radiosity
+2039B7BC 24040001 //Set VSync Mode to 60 FPS
+// 202457F0 00000000 //Skip MPEG Decoder
+// 20245810 00000000 //Skip MPEG Decoder
