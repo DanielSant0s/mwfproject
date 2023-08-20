@@ -29,12 +29,12 @@ patch=0,EE,20407554,extended,00000000 nop
 patch=0,EE,202AE5A0,extended,00000000 nop
 
 // Impound garages working correctly - WARNING w PAL version (data do not correspond)
-patch=0,EE,201C60D8,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
-patch=0,EE,201C6410,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
-patch=0,EE,201C6560,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
+// patch=0,EE,201C60D8,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
+// patch=0,EE,201C6410,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
+// patch=0,EE,201C6560,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
 
 // Impounding after busted works - WARNING w PAL version (data do not correspond)
-patch=0,EE,202A0BA4,extended,00000000 nop
+// patch=0,EE,202A0BA4,extended,00000000 nop
 
 // Weapon icon fix (crosshairs mess up rwRENDERSTATEZWRITEENABLE)
 patch=0,EE,202AAD44,extended,00000000 nop
@@ -111,47 +111,47 @@ patch=0,EE,202AB760,extended,24050231 //Armour bar pos x
 patch=0,EE,202AB8B0,extended,24050231 //Breath bar pos x
 patch=0,EE,202AB8F8,extended,24050231 //Breath bar pos x
 
-////CHud::DrawBustedWastedMessage width 
-//patch=0,EE,202AF568,extended,3C033F90	//lui     $v1, 0x3f90
-//patch=0,EE,202AF56C,extended,0C0AA200  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
-//patch=0,EE,202AF570,extended,44836000	//mtc1    $v1, $f12
-//patch=0,EE,202AF574,extended,0C0AA2F4  //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
-//patch=0,EE,202AF578,extended,24040001  //li      $a0, 1           # Load Immediate
-//patch=0,EE,202AF57C,extended,0C0AA310  //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
-//patch=0,EE,202AF580,extended,0000202D  //move    $a0, $zero
-//patch=0,EE,202AF584,extended,0C0AA314  //jal     _ZN5CFont14SetOrientationEh  # Jump And Link
-//patch=0,EE,202AF588,extended,0000202D  //move    $a0, $zero
-//patch=0,EE,202AF58C,extended,0C0AA27C  //jal     _ZN5CFont12SetFontStyleEh  # Jump And Link
-//patch=0,EE,202AF590,extended,0000202D  //move    $a0, $zero
-//patch=0,EE,202AF594,extended,0C0AA2EC  //jal     _ZN5CFont7SetEdgeEa  # Jump And Link
-//patch=0,EE,202AF598,extended,24040003  //li      $a0, 3           # Load Immediate
-//patch=0,EE,202AF59C,extended,3C01007C  //lui     $at, 0x7C  # '|'  # Load Upper Immediate
-//patch=0,EE,202AF5A0,extended,3C024F00  //lui     $v0, 0x4F00      # Load Upper Immediate
-//patch=0,EE,202AF5A4,extended,C42132D8  //lwc1    $f1, _styledText3Alpha  # Load Word to FPU
-//patch=0,EE,202AF5A8,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
-//
-////CHud::DrawSuccessFailedMessage width
-//patch=0,EE,202AF0FC,extended,3C033f59	//lui     $v1, 0x3f59
-//patch=0,EE,202AF100,extended,0C0AA200   //jal     _ZN5CFont8SetScaleEf  # Jump And Link
-//patch=0,EE,202AF104,extended,44836000	//mtc1    $v1, $f12
-//patch=0,EE,202AF108,extended,0C0AA2F4   //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
-//patch=0,EE,202AF10C,extended,24040001   //li      $a0, 1           # Load Immediate
-//patch=0,EE,202AF110,extended,0C0AA310   //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
-//patch=0,EE,202AF114,extended,0000202D   //move    $a0, $zero
-//patch=0,EE,202AF118,extended,0C0AA314   //jal     _ZN5CFont14SetOrientationEh  # Jump And Link
-//patch=0,EE,202AF11C,extended,0000202D   //move    $a0, $zero
-//patch=0,EE,202AF120,extended,2402024E   //li      $v0, 0x24E       # Load Immediate
-//patch=0,EE,202AF124,extended,44820000   //mtc1    $v0, $f0         # Move to FPU
-//patch=0,EE,202AF128,extended,0C0AA29C   //jal     _ZN5CFont13SetCentreSizeEf  # Jump And Link
-//patch=0,EE,202AF12C,extended,46800320   //cvt.s.w $f12, $f0        # Floating-point Convert to Single Fixed-Point Format
-//patch=0,EE,202AF130,extended,0C0AA27C   //jal     _ZN5CFont12SetFontStyleEh  # Jump And Link
-//patch=0,EE,202AF134,extended,24040003   //li      $a0, 3           # Load Immediate
-//patch=0,EE,202AF138,extended,0C0AA2EC   //jal     _ZN5CFont7SetEdgeEa  # Jump And Link
-//patch=0,EE,202AF13C,extended,24040002   //li      $a0, 2           # Load Immediate
-//patch=0,EE,202AF140,extended,3C01007C   //lui     $at, 0x7C  # '|'  # Load Upper Immediate
-//patch=0,EE,202AF144,extended,3C024F00   //lui     $v0, 0x4F00      # Load Upper Immediate
-//patch=0,EE,202AF148,extended,C42132D0   //lwc1    $f1, flt_7C32D0  # Load Word to FPU
-//patch=0,EE,202AF14C,extended,44820000   //mtc1    $v0, $f0         # Move to FPU
+//CHud::DrawBustedWastedMessage width 
+patch=0,EE,202AF768,extended,3C033F90  //lui     $v1, 0x3f90
+patch=0,EE,202AF76C,extended,0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF770,extended,44836000  //mtc1    $v1, $f12
+patch=0,EE,202AF774,extended,0C0AA374  //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
+patch=0,EE,202AF778,extended,24040001  //li      $a0, 1           # Load Immediate
+patch=0,EE,202AF77C,extended,0C0AA310  //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
+patch=0,EE,202AF780,extended,0000202D  //move    $a0, $zero
+patch=0,EE,202AF784,extended,0C0AA394  //jal     _ZN5CFont14SetOrientationEh  # Jump And Link
+patch=0,EE,202AF788,extended,0000202D  //move    $a0, $zero
+patch=0,EE,202AF78C,extended,0C0AA2FC  //jal     _ZN5CFont12SetFontStyleEh  # Jump And Link
+patch=0,EE,202AF790,extended,0000202D  //move    $a0, $zero
+patch=0,EE,202AF794,extended,0C0AA36C  //jal     _ZN5CFont7SetEdgeEa  # Jump And Link
+patch=0,EE,202AF798,extended,24040003  //li      $a0, 3           # Load Immediate
+patch=0,EE,202AF79C,extended,3C01007C  //lui     $at, 0x7C  # '|'  # Load Upper Immediate
+patch=0,EE,202AF7A0,extended,3C024F00  //lui     $v0, 0x4F00      # Load Upper Immediate
+patch=0,EE,202AF7A4,extended,C4213F68  //lwc1    $f1, _styledText3Alpha  # Load Word to FPU
+patch=0,EE,202AF7A8,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
+
+//CHud::DrawSuccessFailedMessage width
+patch=0,EE,202AF2FC,extended,3C033F59  //lui     $v1, 0x3f59
+patch=0,EE,202AF300,extended,0C0AA280  //jal     _ZN5CFont8SetScaleEf  # Jump And Link
+patch=0,EE,202AF304,extended,44836000  //mtc1    $v1, $f12
+patch=0,EE,202AF308,extended,0C0AA374  //jal     _ZN5CFont15SetProportionalEh  # Jump And Link
+patch=0,EE,202AF30C,extended,24040001  //li      $a0, 1           # Load Immediate
+patch=0,EE,202AF310,extended,0C0AA390  //jal     _ZN5CFont10SetJustifyEh  # Jump And Link
+patch=0,EE,202AF314,extended,0000202D  //move    $a0, $zero
+patch=0,EE,202AF318,extended,0C0AA394  //jal     _ZN5CFont14SetOrientationEh  # Jump And Link
+patch=0,EE,202AF31C,extended,0000202D  //move    $a0, $zero
+patch=0,EE,202AF320,extended,2402024E  //li      $v0, 0x24E       # Load Immediate
+patch=0,EE,202AF324,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
+patch=0,EE,202AF328,extended,0C0AA31C  //jal     _ZN5CFont13SetCentreSizeEf  # Jump And Link
+patch=0,EE,202AF32C,extended,46800320  //cvt.s.w $f12, $f0        # Floating-point Convert to Single Fixed-Point Format
+patch=0,EE,202AF330,extended,0C0AA2FC  //jal     _ZN5CFont12SetFontStyleEh  # Jump And Link
+patch=0,EE,202AF334,extended,24040003  //li      $a0, 3           # Load Immediate
+patch=0,EE,202AF338,extended,0C0AA36C  //jal     _ZN5CFont7SetEdgeEa  # Jump And Link
+patch=0,EE,202AF33C,extended,24040002  //li      $a0, 2           # Load Immediate
+patch=0,EE,202AF340,extended,3C01007C  //lui     $at, 0x7C  # '|'  # Load Upper Immediate
+patch=0,EE,202AF344,extended,3C024F00  //lui     $v0, 0x4F00      # Load Upper Immediate
+patch=0,EE,202AF348,extended,C4213F60  //lwc1    $f1, flt_7C32D0  # Load Word to FPU
+patch=0,EE,202AF34C,extended,44820000  //mtc1    $v0, $f0         # Move to FPU
 
 //CRadar::DrawRadarSprite width
 patch=0,EE,2026D4D4,extended,3C034100  //lui     $v1, 0x4100      # Load Upper Immediate
