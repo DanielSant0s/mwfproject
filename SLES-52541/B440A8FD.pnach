@@ -1,6 +1,7 @@
 gametitle=Grand Theft Auto: San Andreas
-comment=GTA San Andreas Modern Widescreen Fix adapted for PAL region (by github.com/augstb)
+comment=GTA San Andreas Modern Widescreen Fix (adapted for PAL region by Augustin Blanchet https://github.com/augstb)
 
+// Adapted for PAL region by Augustin Blanchet https://github.com/augstb
 //------------------------------------------------Fixes------------------------------------------------//
 
 //Linear Filtering for License Plates
@@ -28,12 +29,12 @@ patch=0,EE,20407554,extended,00000000 nop
 // Game seems to assume they can show together
 patch=0,EE,202AE5A0,extended,00000000 nop
 
-// Impound garages working correctly - WARNING w PAL version (data do not correspond)
+// Impound garages working correctly - DISABLED on PAL version (data do not correspond)
 // patch=0,EE,201C60D8,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
 // patch=0,EE,201C6410,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
 // patch=0,EE,201C6560,extended,0C0BAA58 jal CGarages::IsPointWithinAnyGarage(CVector &)
 
-// Impounding after busted works - WARNING w PAL version (data do not correspond)
+// Impounding after busted works - DISABLED on PAL version (data do not correspond)
 // patch=0,EE,202A0BA4,extended,00000000 nop
 
 // Weapon icon fix (crosshairs mess up rwRENDERSTATEZWRITEENABLE)
