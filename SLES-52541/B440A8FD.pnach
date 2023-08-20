@@ -191,35 +191,35 @@ comment=GTA San Andreas Modern Widescreen Fix adapted for PAL region (by github.
 //patch=0,EE,20268644,extended,24060008
 //patch=0,EE,20268674,extended,24050006
 //patch=0,EE,2026867C,extended,24060008
-//
-//patch=0,EE,202ADA20,extended,3c033ecc //mission timers
-//patch=0,EE,202AD82C,extended,3c023f33 //Vehicle name width
-//patch=0,EE,202AFCAC,extended,3c023f33 //Mission title width
-//
-//patch=0,EE,202AD29C,extended,c78c8384 //Area name width hook - 0x663474
-//
-//patch=0,EE,20663bc8,extended,3ecccccd //Money Width
-//
-//patch=0,EE,20663C58,extended,3ecccccd //Subtitles Width
-//
-//patch=0,EE,20663674,extended,3EB33333 //Help box Width
-//
-//patch=0,EE,202AC440,extended,C78C82BC //DrawVitalStats weekday width hook
-//patch=0,EE,202AC438,extended,C78D899C //DrawVitalStats weekday height hook
-//
-//patch=0,EE,2023E5C4,extended,3c023f33 //CMenuManager::DrawWindow title width
-//
-//patch=0,EE,202ACAB4,extended,3C0341d4 //AltitudeBar width
-//patch=0,EE,202ACC10,extended,3C0241e5 //AltitudeCounter width
-//patch=0,EE,202ACC00,extended,3C034190 //AltitudeCounter X Pos
-//
-////Set drop shadows to outline
-//patch=0,EE,202A8B90,extended,3c01007c
-//patch=0,EE,202A8B94,extended,a0202346
-//patch=0,EE,202A8B98,extended,3c01007c
-//patch=0,EE,202A8B9C,extended,a024234b
-//patch=0,EE,202A8Ba8,extended,a024234c
-//
+
+patch=0,EE,202ADC20,extended,3c033ecc //mission timers
+patch=0,EE,202ADA2C,extended,3c023f33 //Vehicle name width
+patch=0,EE,202AFEAC,extended,3c023f33 //Mission title width
+
+patch=0,EE,202AD49C,extended,c78c8384 //Area name width hook - 0x663474
+
+patch=0,EE,20664448,extended,3ecccccd //Money Width
+
+patch=0,EE,206644D8,extended,3ecccccd //Subtitles Width
+
+patch=0,EE,20663EF4,extended,3EB33333 //Help box Width
+
+patch=0,EE,202AC640,extended,C78C82BC //DrawVitalStats weekday width hook
+patch=0,EE,202AC638,extended,C78D899C //DrawVitalStats weekday height hook
+
+patch=0,EE,2023E624,extended,3c023f33 //CMenuManager::DrawWindow title width
+
+patch=0,EE,202ACCB4,extended,3C0341d4 //AltitudeBar width
+patch=0,EE,202ACE10,extended,3C0241e5 //AltitudeCounter width
+patch=0,EE,202ACE00,extended,3C034190 //AltitudeCounter X Pos
+
+//Set drop shadows to outline
+patch=0,EE,202A8D90,extended,3c01007c
+patch=0,EE,202A8D94,extended,a0202346
+patch=0,EE,202A8D98,extended,3c01007c
+patch=0,EE,202A8D9C,extended,a024234b
+patch=0,EE,202A8Da8,extended,a024234c
+
 //--------------------------------------------------FOV------------------------------------------------//
 
 patch=0,EE,2021DFE4,extended,0C044C2F //SetFOV Call
